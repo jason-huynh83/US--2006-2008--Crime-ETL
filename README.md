@@ -4,6 +4,7 @@ The purpose of this project was to create an ETL pipeline for analytical purpose
 ## Dataset
 The dataset that was used can be found [here](https://ucr.fbi.gov/crime-in-the-u.s/2006).
 ## Data Schema and Design
+![Crime ERD](Crime.PNG)
 - **fact_table** - This table consists of all the measurable factors: 
 	- State_id, City_id, Year_id, Population, ViolentCrime, MurderAndNonEgligentManslaughter, ForcibleRape, Robbery, AggravatedAssault, PropertyCrime, Burglary, LarcenyTheft, MotorVehicleTheft, Arson
 - **city_dim** - Dimension table for Cities
