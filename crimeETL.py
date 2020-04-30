@@ -39,22 +39,6 @@ def main():
 
     conn.close()
 
-#if __name__ == "__main__":
-    #main()
-
-conn = mysql.connector.connect (
-    host = "localhost",
-    user = "root",
-    passwd = "password123",
-    database = "crime"
-    )
-cur = conn.cursor()
-
-query = pd.read_sql_query("""SELECT cd.City, ft.ViolentCrime
-            FROM fact_table as ft
-            INNER JOIN city_dim as cd
-            ON cd.City_id = ft.City_id
-            WHERE ViolentCrime = (select Max(ViolentCrime) from fact_table)""",conn)
-query
-
+if __name__ == "__main__":
+    main()
 
